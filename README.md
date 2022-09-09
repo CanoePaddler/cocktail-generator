@@ -1,4 +1,5 @@
 # cocktail-generator
+
 * Use a CSS framework other than Bootstrap.
 - foundation
 - Todd
@@ -38,4 +39,6 @@
 
 * Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 - 
+=======
+
 
