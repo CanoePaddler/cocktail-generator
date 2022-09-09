@@ -1,0 +1,43 @@
+.menu .menu-text {
+    color: blue;
+    font-size: x-large;
+    font-family: 'Rock Salt', cursive;
+}
+
+.hero-section {
+    background: url(cocktail-hero.jpg) 50% no-repeat;
+    background-size: cover;
+    height: 60vh;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* This is the search form in the hero img */
+.grid-x {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.hero-section .hero-section-text {
+    color: #fefefe;
+    text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+.input-group-rounded .input-group-field {
+    border-radius: 5000px 0 0 5000px;
+    padding-left: 1rem;
+}
+
+.input-group-rounded .input-group-button .button {
+    border-radius: 0 5000px 5000px 0;
+    font-size: 0.8rem;
+}
