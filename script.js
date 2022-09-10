@@ -1,20 +1,21 @@
 
 
 function giphyApi() {
-    var getInfo = document.getElementById("input").value
+    var getInfo = document.getElementById("user-input").value
     console.log(getInfo)
     
     var myApi = "4SGZMcOUobdN4nX6cFWdyX3pDbRi5Akr"
-    var giphyApiURL = `https://api.giphy.com/v1/gifs/search?q=${getInfo}&rating=g&api_key=${myApi}`
+    var apiAddress = `https://api.giphy.com/v1/gifs/search?q=${getInfo}&rating=g&api_key=${myApi}`
     
-    fetch(giphyApiURL).then(function(data) {
+    fetch(apiAddress).then(function(data) {
         return data.json()
     })
     .then(function(json){
       console.log(json.data[0].images.fixed_height.url)
-      var imgPath = json.data[0].images.fixed_height.url
+      var giphyLocation = json.data[0].images.fixed_height.url
+
       var img = document.createElement("img")
-      img.setAttribute("src", imgPath)
+      img.setAttribute("src", giphyLocation)
       document.body.appendChild(img)
     })
   }
