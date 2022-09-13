@@ -30,9 +30,9 @@
 - offer option to enter personal info
 - use personal info to customize site
 
-* Be responsive.
+* Be responsive. X
 
-* Have a polished UI.
+* Have a polished UI. X
 
 * Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 - comment as you go
