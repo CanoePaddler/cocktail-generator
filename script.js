@@ -34,3 +34,51 @@ function giphyApi() {
   Will V worked on the Giphy API :)
 
   */
+
+  //----------------------------------------//
+
+  var fullname = document.getElementById('fullname'),
+    address = document.getElementById('address'),
+    saveButton = document.getElementById('save'),
+    loadButton = document.getElementById('load'),
+    clearButton = document.getElementById('clear'),
+    resetButton = document.getElementById('reset');
+
+var localStore = {
+  saveLocalStorage: function() {
+    localStorage.setItem('item', JSON.stringify(this.getInputValue()));
+  },
+  loadLocalStorage: function() {
+    var store = JSON.parse(localStorage.getItem('item'));
+    if ( store ) {
+      fullname.value = store.fullname;
+      address.value = store.address;
+    } 
+  },
+  clearLocalStorage: function() {
+    localStorage.removeItem('item');
+  },
+  getInputValue: function() {
+    return {
+      fullname: fullname.value,
+      address: address.value
+    }
+  }
+};
+
+saveButton.addEventListener('click', function() {
+  localStore.saveLocalStorage();
+}, false);
+
+loadButton.addEventListener('click', function() {
+  localStore.loadLocalStorage();
+}, false);
+
+clearButton.addEventListener('click', function() {
+  localStore.clearLocalStorage();
+}, false);
+
+resetButton.addEventListener('click', function() {
+  fullname.value = '';
+  address.value = '';
+}, false);
