@@ -42,6 +42,7 @@
     font-size: 0.8rem;
 }
 
+
 /*The classes modal, modal-content, and close button refer to the modal that will appear if there in no input upon form submission*/
 .modal {
     display: none;
@@ -74,3 +75,24 @@
   .close-btn:hover {
     color: darkgray;
   }
+=======
+/*-----------------------------------------------*/
+
+@import compass
+
+.form
+  margin: 20px
+  input[type="text"]
+    border: 1px solid lighten(#aaa, 10%)
+    padding: 5px 10px
+  button
+    background-color: darken(royalblue, 10%)
+    border: 0
+    border: 1px solid darken(#aaa, 10%)
+    color: #fff
+    padding: 7px 15px
+    width: 80px
+    cursor: pointer
+    &:hover, &:focus
+      background-color: darken(royalblue, 40%)
+
