@@ -25,14 +25,14 @@
         <div class="top-bar-right">
             <ul class="menu">
                 <ul class="dropdown menu" data-dropdown-menu>
-                    <li><a href="#">Home</a></li>
-                    <li id="random-drink"><a href="#">Drink of the Day</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li id="random-drink"><a href="wordofday.html">Word of the Day</a></li>
                 </ul>
             </ul>
         </div>
     </div>
 
-    <div class="hero-section">
+    <div class="hero-section" id="form">
         <div class="hero-section-text">
             <h1>Swish Cocktails</h1>
             <h5>Enter a cocktail name for a recipe</h5>
@@ -46,6 +46,15 @@
                                 placeholder="Enter a cocktail name:">
                             <div class="input-group-button">
                                 <input type="submit" class="button secondary" id="search-btn" value="Search">
+
+                                <!--modal below will appear if user submits form with no input-->
+                                <div class="modal">
+                                    <div class="modal-content">
+                                      <span class="close-btn">&times;</span>
+                                      <p>Please type a word in the search form below.</p>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
