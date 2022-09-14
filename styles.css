@@ -51,6 +51,7 @@ I used this website as reference https://codepen.io/oneezy/pen/GQmoQY
 
 .signup
   margin: 19px
+  
   input[type="text"]
     border: 2px solid lighten(#aaa, 9%)
     padding: 6px 9px
@@ -60,6 +61,7 @@ I used this website as reference https://codepen.io/oneezy/pen/GQmoQY
     border: 0
     border: 2px solid darken(#aaa, 9%)
     color: #fff
+
     padding: 6px 14px
     width: 79px
     cursor: pointer

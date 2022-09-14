@@ -39,17 +39,20 @@ function giphyApi() {
 
   /*   */
 
-  var fullname = document.getElementById('fullname'),
-    address = document.getElementById('address'),
-    saveButton = document.getElementById('save'),
-    loadButton = document.getElementById('load'),
-    clearButton = document.getElementById('clear'),
-    resetButton = document.getElementById('reset');
+  var fullname = document.getElementById('yourname'),
+    address = document.getElementById('email'),
+    saveIt = document.getElementById('save'),
+
+    loadIt = document.getElementById('load'),
+    clearIt = document.getElementById('clear'),
+
+    resetIt = document.getElementById('reset');
 
 var localStore = {
   saveLocalStorage: function() {
     localStorage.setItem('item', JSON.stringify(this.getInputValue()));
   },
+
   loadLocalStorage: function() {
     var store = JSON.parse(localStorage.getItem('item'));
     if ( store ) {
@@ -68,19 +71,20 @@ var localStore = {
   }
 };
 
-saveButton.addEventListener('click', function() {
+
+saveIt.addEventListener('click', function() {
   localStore.saveLocalStorage();
 }, false);
 
-loadButton.addEventListener('click', function() {
+loadIt.addEventListener('click', function() {
   localStore.loadLocalStorage();
 }, false);
 
-clearButton.addEventListener('click', function() {
+clearIt.addEventListener('click', function() {
   localStore.clearLocalStorage();
 }, false);
 
-resetButton.addEventListener('click', function() {
+resetIt.addEventListener('click', function() {
   fullname.value = '';
   address.value = '';
 }, false);
