@@ -31,11 +31,13 @@ function giphyApi() {
   https://www.youtube.com/watch?v=mj8_w11MvH8&list=WL&index=15
 
 
-  Will V worked on the Giphy API :)
+  Will V worked on the Giphy API and Local Storage :)
 
   */
 
   //----------------------------------------//
+
+  /*   */
 
   var fullname = document.getElementById('fullname'),
     address = document.getElementById('address'),
@@ -82,3 +84,12 @@ resetButton.addEventListener('click', function() {
   fullname.value = '';
   address.value = '';
 }, false);
+
+/* References
+
+https://codepen.io/oneezy/pen/GQmoQY
+https://stackoverflow.com/questions/36178718/search-html5-localstorage-values
+https://medium.com/swlh/using-local-storage-with-javascript-cb3713ca56c4
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
+*/

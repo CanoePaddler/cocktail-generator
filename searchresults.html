@@ -45,10 +45,10 @@
                 <div class="grid-x grid-padding-x">
                     <div class="medium-6 cell">
                         <div class="input-group input-group-rounded">
-                            <input class="input-group-field" id="user-input" type="search"
+                            <input  class="input-group-field" id="user-input" type="search"
                                 placeholder="Enter a cocktail name:">
                             <div class="input-group-button">
-                                <input type="submit" class="button secondary" id="search-btn" value="Search">
+                                <input id = "gbtn" onclick = "giphyApi()" type="submit" class="button secondary" id="search-btn" value="Search">
                             </div>
                         </div>
                     </div>
@@ -84,10 +84,12 @@
         </div>
     </div>
 
-    <div class="form">
+    <!--This part is for the local storage-->
+    <div class="signup">
+        <h5>Sign Up Today!</h5>
         <p>
-          <input type="text" id="fullname" placeholder="Fullname"/>
-          <input type="text" id="address" placeholder="Address"/>
+          <input type="text" id="fullname" placeholder="Your Name"/>
+          <input type="text" id="address" placeholder="Email"/>
         </p>
         <p>
           <button id="save">Save</button>
