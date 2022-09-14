@@ -49,22 +49,29 @@ I used this website as reference https://codepen.io/oneezy/pen/GQmoQY
    */
 @import compass
 
-.signup
-  margin: 19px
-  
-  input[type="text"]
-    border: 2px solid lighten(#aaa, 9%)
-    padding: 6px 9px
+.signup {
+  margin: 19px;
+
+  input[type="text"];
+    border: 2px, solid, lighten(#aaa, 9%);
+    padding: 6px 9px;
 
   button
-    background-color: darken(green, 9%)
-    border: 0
-    border: 2px solid darken(#aaa, 9%)
-    color: #fff
+    background-color: green, 9%;
+    border: 0;
+    border: 2px, solid, #aaa, 9%;
+    color: #fff;
 
-    padding: 6px 14px
-    width: 79px
-    cursor: pointer
-    &:hover, &:focus
-      background-color: darken(green, 39%)
+    padding: 6px 14px;
+    width: 79px;
+    cursor: pointer;
+    &:hover, &:focus;
+      background-color: darken(green, 39%);
+}
        
+.storage-btn {
+    
+
+
+
+}
