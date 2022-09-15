@@ -71,54 +71,82 @@ function giphyApi() {
   https://www.youtube.com/watch?v=mj8_w11MvH8&list=WL&index=15
 
 
-  Will V worked on the Giphy API :)
+  Will V worked on the Giphy API and Local Storage :)
 
   */
 
   //----------------------------------------//
 
-  var fullname = document.getElementById('fullname'),
-    address = document.getElementById('address'),
-    saveButton = document.getElementById('save'),
-    loadButton = document.getElementById('load'),
-    clearButton = document.getElementById('clear'),
-    resetButton = document.getElementById('reset');
+  /* Here I use some methods to grab the form ids in the html and save them as 
+  variables*/
 
-var localStore = {
+  var yourname = document.getElementById('yourname'),
+
+    email = document.getElementById('email'),
+    saveIt = document.getElementById('save'),
+
+    loadIt = document.getElementById('load'),
+    clearIt = document.getElementById('clear'),
+
+    resetIt = document.getElementById('reset');
+//Next I created an object called saveLcal with a number of functions to help save
+//the user inputs for their name and email address
+var saveLocal = {
+  //save function
   saveLocalStorage: function() {
-    localStorage.setItem('item', JSON.stringify(this.getInputValue()));
+    localStorage.setItem('item', JSON.stringify(this.grabInfo()));
   },
+  //load function
   loadLocalStorage: function() {
-    var store = JSON.parse(localStorage.getItem('item'));
-    if ( store ) {
-      fullname.value = store.fullname;
-      address.value = store.address;
+    var savestuff = JSON.parse(localStorage.getItem('item'));
+    if ( savestuff ) {
+      yourname.value = savestuff.yourname;
+      email.value = savestuff.email;
     } 
   },
+  //clear function
   clearLocalStorage: function() {
     localStorage.removeItem('item');
   },
-  getInputValue: function() {
+  grabInfo: function() {
     return {
-      fullname: fullname.value,
-      address: address.value
+      yourname: yourname.value,
+      email: email.value
+ //The functions operate based on whether the use pushes the save, load, or clear button
     }
   }
 };
 
-saveButton.addEventListener('click', function() {
-  localStore.saveLocalStorage();
+//This part adds an event listener to the buttons to call the functions to clear, save, load or reset info
+saveIt.addEventListener('click', function() {
+  saveLocal.saveLocalStorage();
 }, false);
 
-loadButton.addEventListener('click', function() {
-  localStore.loadLocalStorage();
+loadIt.addEventListener('click', function() {
+  saveLocal.loadLocalStorage();
 }, false);
 
-clearButton.addEventListener('click', function() {
-  localStore.clearLocalStorage();
+clearIt.addEventListener('click', function() {
+  saveLocal.clearLocalStorage();
 }, false);
+
+
+resetIt.addEventListener('click', function() {
+  yourname.value = '';
+  email.value = '';
+}, false);
+
+/* References
+
+https://codepen.io/oneezy/pen/GQmoQY
+https://stackoverflow.com/questions/36178718/search-html5-localstorage-values
+https://medium.com/swlh/using-local-storage-with-javascript-cb3713ca56c4
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
+*/
 
 resetButton.addEventListener('click', function() {
   fullname.value = '';
   address.value = '';
 }, false);
+

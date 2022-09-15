@@ -78,14 +78,39 @@
 =======
 /*-----------------------------------------------*/
 
+/* This part is for the local storage section
+I used this website as reference https://codepen.io/oneezy/pen/GQmoQY
+   */
 @import compass
 
-.form
-  margin: 20px
-  input[type="text"]
-    border: 1px solid lighten(#aaa, 10%)
-    padding: 5px 10px
+.signup {
+  margin: 19px;
+
+  input[type="text"];
+    border: 2px, solid, lighten(#aaa, 9%);
+    padding: 6px 9px;
+
   button
+
+    background-color: green, 9%;
+    border: 0;
+    border: 2px, solid, #aaa, 9%;
+    color: #fff;
+
+    padding: 6px 14px;
+    width: 79px;
+    cursor: pointer;
+    &:hover, &:focus;
+      background-color: darken(green, 39%);
+}
+       
+.storage-btn {
+    
+
+
+
+}
+
     background-color: darken(royalblue, 10%)
     border: 0
     border: 1px solid darken(#aaa, 10%)
@@ -95,4 +120,5 @@
     cursor: pointer
     &:hover, &:focus
       background-color: darken(royalblue, 40%)
+
 
