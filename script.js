@@ -1,3 +1,43 @@
+
+// variable for entire form
+var formEl = document.querySelector('#form');
+
+// function will send user to searchresults.html or display modal
+function formSubmit(event) {
+    event.preventDefault();
+
+    //   variable for user input in form
+    var cocktailInput = document.querySelector('#user-input').value;
+
+    // variable for modal and modal close button
+    var modal = document.querySelector(".modal")
+    var closeBtn = document.querySelector(".close-btn")
+
+    // if user submits form with no input, modal will display
+    if (!cocktailInput) {
+        modal.style.display = "block"
+
+        // close button will hide modal
+        closeBtn.onclick = function(){
+            modal.style.display = "none"
+          }
+        // modal will not display unless if statement is true
+        window.onclick = function(e){
+        if(e.target == modal){
+            modal.style.display = "none"
+        }
+        }
+        return;
+    }
+
+    //sends user to searchreults.html with user input parameter
+    var resultsUrl = './searchresults.html?s=' + cocktailInput;
+    location.assign(resultsUrl);
+}
+
+// when user submits form, function formSubmit is called
+formEl.addEventListener('submit', formSubmit);
+=======
 // Here is the logic for the Giphy API
 
 //This function grabs the input value from the search bar
@@ -90,6 +130,7 @@ clearIt.addEventListener('click', function() {
   saveLocal.clearLocalStorage();
 }, false);
 
+
 resetIt.addEventListener('click', function() {
   yourname.value = '';
   email.value = '';
@@ -103,3 +144,9 @@ https://medium.com/swlh/using-local-storage-with-javascript-cb3713ca56c4
 https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 
 */
+
+resetButton.addEventListener('click', function() {
+  fullname.value = '';
+  address.value = '';
+}, false);
+
