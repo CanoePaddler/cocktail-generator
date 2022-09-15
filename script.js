@@ -37,7 +37,7 @@ function formSubmit(event) {
 
 // when user submits form, function formSubmit is called
 formEl.addEventListener('submit', formSubmit);
-=======
+
 // Here is the logic for the Giphy API
 
 //This function grabs the input value from the search bar
