@@ -31,7 +31,7 @@
                     <!--The id "gtn" on click will call the giphy api based
                     on what the user puts in the search bar and when the Daily
                     Giphy button is pressed. It displays at the bottom of the page -->
-                    <li id="random-drink" id = "gbtn" onclick = "giphyApi()"><a href="#">Daily Giphy</a></li>
+                    <li><a href="#">Daily Giphy</a></li>
                     
                 </ul>
             </ul>
@@ -51,7 +51,8 @@
                             <input class="input-group-field" id="user-input" type="search"
                                 placeholder="Enter a cocktail name:">
                             <div class="input-group-button">
-                                <input type="submit" class="button secondary" id="search-btn" value="Search">
+                               
+                                <input  onclick = "giphyApi()" type="submit" class="button secondary" id="search-btn" value="Search">
 
                                 <!--modal below will appear if user submits form with no input-->
                                 <div class="modal">
