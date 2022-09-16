@@ -1,13 +1,20 @@
+:root {
+  --lightblue: rgb(33, 171, 179);
+  --darkblue: rgb(10, 70, 113);
+  --white: rgb(255, 255, 255);
+}
+
+
 .menu .menu-text {
-    color: blue;
+    color: var(--darkblue);
     font-size: x-large;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .hero-section {
-    background: url(cocktail-hero.jpg) 50% no-repeat;
-    background-size: cover;
-    height: 60vh;
+    background-image: linear-gradient(to top right, var(--darkblue), var(--lightblue));
+    background-size: contain;
+    height: 80vh;
     text-align: center;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -29,7 +36,12 @@
 
 .hero-section .hero-section-text {
     color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
+    text-shadow: 3px 3px 2px #4a4a4a;
+
+}
+
+.hero-section-text h1 {
+  font-family: 'Abril Fatface', cursive;
 }
 
 .input-group-rounded .input-group-field {
@@ -42,6 +54,13 @@
     font-size: 0.8rem;
 }
 
+.top-bar{
+  background-color: var(--white)
+}
+
+.dropdown li {
+  background-color: var(--white)
+}
 
 /*The classes modal, modal-content, and close button refer to the modal that will appear if there in no input upon form submission*/
 .modal {
@@ -68,15 +87,22 @@
   }
   .close-btn {
     float: right; 
-    color: lightgray; 
     font-size: 24px;  
     font-weight: bold;
   }
-  .close-btn:hover {
-    color: darkgray;
+
+  .foot {
+    color: var(--darkblue)
   }
-=======
-/*-----------------------------------------------*/
+
+  .results-search {
+    width: 30%;
+  }
+
+  .result-page-return {
+    display: flex;
+    align-items: top;
+  }
 
 /* This part is for the local storage section
 I used this website as reference https://codepen.io/oneezy/pen/GQmoQY
