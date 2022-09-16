@@ -23,6 +23,10 @@ Remaining Tasks:
 - Presentation
 
 
+
+
+
+
 Time Line:
 Thursday:
 - 
@@ -77,7 +81,7 @@ Presentation
 - Who can put together the powerpoint
 
 * Elevator pitch: a one minute description of your application
-- who would like to do this part?
+- who would like to do this part? (Will)
 
 * Concept: What is your user story? What was your motivation for development?
 - who would like to take this over?
