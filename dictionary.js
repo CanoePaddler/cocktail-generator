@@ -1,5 +1,5 @@
 
-function giphyApi() {
+function dictionaryApi() {
     let input = document.getElementById('user-input').value
     var apiKey = "8dd6dd73-b3ce-433c-8b39-431c51190aa8"
     var websterApi = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${input}?key=${apiKey}`
