@@ -5,14 +5,14 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Swish Cocktails</title>
+    <title>Daily Dictionary</title>
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Baskerville:ital@1&family=Silkscreen&display=swap" rel="stylesheet">
 
 
 </head>
@@ -20,7 +20,7 @@
 <body>
     <div class="top-bar">
         <div class="top-bar-left menu">
-            <li class="menu-text">Swish Cocktails</li>
+            <li class="menu-text">Daily Dictionary</li>
         </div>
         <div class="top-bar-right">
             <ul class="menu">
@@ -28,11 +28,7 @@
 
                     <li><a href="index.html">Home</a></li>
                     <li id="random-drink"><a href="wordofday.html">Learn a New Word</a></li>
-                    <!--The id "gtn" on click will call the giphy api based
-                    on what the user puts in the search bar and when the Daily
-                    Giphy button is pressed. It displays at the bottom of the page -->
-                    <li><a href="#">Daily Giphy</a></li>
-                    
+
                 </ul>
             </ul>
         </div>
@@ -40,8 +36,8 @@
 
     <div class="hero-section" id="form">
         <div class="hero-section-text">
-            <h1>Swish Cocktails</h1>
-            <h5>Enter a cocktail name for a recipe</h5>
+            <h1>Daily Dictionary</h1>
+            <h5>Train Your Brain</h5>
         </div>
         <form>
             <div class="grid-container">
@@ -49,7 +45,7 @@
                     <div class="medium-6 cell">
                         <div class="input-group input-group-rounded">
                             <input class="input-group-field" id="user-input" type="search"
-                                placeholder="Enter a cocktail name:">
+                                placeholder="Type a word here">
                             <div class="input-group-button">
                                
                                 <input  onclick = "giphyApi()" type="submit" class="button secondary" id="search-btn" value="Search">
@@ -57,8 +53,8 @@
                                 <!--modal below will appear if user submits form with no input-->
                                 <div class="modal">
                                     <div class="modal-content">
-                                      <span class="close-btn">&times;</span>
-                                      <p>Please type a word in the search form below.</p>
+                                        <span class="close-btn">&times;</span>
+                                        <p>Please type a word in the search form below.</p>
                                     </div>
                                 </div>
 
@@ -69,6 +65,11 @@
             </div>
         </form>
     </div>
+
+    <footer class="foot row grid-x grid-padding-x align-center">
+        <p>This site is powered by Giphy API and Merriam-Webster API <img src="websterlogo.png" height="50px"
+                width="50px"> </p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="script.js"></script>

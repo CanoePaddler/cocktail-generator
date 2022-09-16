@@ -5,14 +5,16 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Swish Cocktails | Search Results</title>
+    <title>Daily Dictionary | Search Results</title>
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Baskerville:ital@1&family=Silkscreen&display=swap"
+        rel="stylesheet">
 
 
 </head>
@@ -20,7 +22,7 @@
 <body>
     <div class="top-bar">
         <div class="top-bar-left menu">
-            <li class="menu-text">Swish Cocktails</li>
+            <li class="menu-text">Daily Dictionary</li>
         </div>
         <div class="top-bar-right">
             <ul class="menu">
@@ -28,115 +30,116 @@
 
                     <li><a href="index.html">Home</a></li>
                     <li id="random-word"><a href="wordofday.html">Learn a New Word</a></li>
-                    <!--The id "gtn" on click will call the giphy api based
-                    on what the user puts in the search bar and when the Daily
-                    Giphy button is pressed. It displays at the bottom of the page -->
-                    <!-- <li id="random-drink"  onclick = "giphyApi()"><a href="#">Daily Giphy</a></li> -->
 
                 </ul>
             </ul>
         </div>
     </div>
+    <div>
+        <div class="result-page-return">
 
-    <div class="hero-section">
-        <div class="hero-section-text">
-            <h1>Swish Cocktails</h1>
-            <h5>Enter a cocktail name for a recipe</h5>
-        </div>
-        <form>
-            <div class="grid-container">
-                <div class="grid-x grid-padding-x">
-                    <div class="medium-6 cell">
-                        <div class="input-group input-group-rounded">
-                            <input  class="input-group-field" id="user-input" type="search"
-                                placeholder="Enter a cocktail name:">
-                            <div class="input-group-button">
+            <div class="hero-section results-search" id="form">
+                <div class="hero-section-text">
+                    <h1>Daily Dictionary</h1>
+                </div>
+                <form>
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                            <div class="medium-6 cell">
+                                <div class="input-group input-group-rounded">
+                                    <input class="input-group-field" id="user-input" type="search"
+                                        placeholder="Type a word here">
+                                    <div class="input-group-button">
+                                          <input id = "input" onclick = "giphyApi()" type="text" class="button secondary" id="search-btn" value="Search">
+                                          <div onclick = "sendApiRequest()"></div>
 
-                                <input id = "input" onclick = "giphyApi()" type="text" class="button secondary" id="search-btn" value="Search">
-                                <div onclick = "sendApiRequest()">
+        
+                                        <!--modal below will appear if user submits form with no input-->
+                                        <div class="modal">
+                                            <div class="modal-content">
+                                                <span class="close-btn">&times;</span>
+                                                <p>Please type a word in the search form below.</p>
+                                            </div>
+                                        </div>
 
-                                </div>
-                                
-                                
-                                <!--modal below will appear if user submits form with no input-->
-                                <div class="modal">
-                                    <div class="modal-content">
-                                      <span class="close-btn">&times;</span>
-                                      <p>No cocktail name detected. Please try again.</p>
                                     </div>
                                 </div>
-
-                                
-
-
                             </div>
                         </div>
                     </div>
+                </form>
+            </div>
+
+            <div class="columns">
+                <div class="card">
+                    <h1>Hello World</h1>
+
                 </div>
             </div>
-        </form>
-    </div>
 
-    <div id="history"></div>
-
-    <!-- Autumn -->
-    <div class="card" style="width: 300px;">
-        <div class="card-divider" id="cocktail-header">
-            This is a header
+            </div>
         </div>
-        <img src="" id="cocktail-img">
-        <div class="card-section" id="cocktail-info">
-            <h4>This is a card.</h4>
-            <p>It has an easy to override visual style, and is appropriately subdued.</p>
+
+        <div id="history"></div>
+
+        <!-- Autumn -->
+        <div class="card" style="width: 300px;">
+            <div class="card-divider" id="cocktail-header">
+                This is a header
+            </div>
+            <img src="" id="cocktail-img">
+            <div class="card-section" id="cocktail-info">
+                <h4>This is a card.</h4>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Will :) -->
-    <div class="card" style="width: 300px;">
-        <div class="card-divider" id="gif-header">
-            This is a header
+        <!-- Will :) -->
+        <div class="card" style="width: 300px;">
+            <div class="card-divider" id="gif-header">
+                This is a header
+            </div>
+            <img src="" id="gif-img">
+            <div class="card-section" id="gif-info">
+                <h4>This is a card.</h4>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p>
+
+            </div>
         </div>
-        <img src="" id="gif-img">
-        <div class="card-section" id="gif-info">
-            <h4>This is a card.</h4>
-            <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        
+
+        <!--This part is for the local storage-->
+        <div class="signup">
+            <h5>Sign Up Today!</h5>
+
+            <p>
+                <input type="text" id="yourname" placeholder="Your Name" />
+
+                <input type="text" id="email" placeholder="Email" />
+            </p>
+            <p class="storage-btn">
+                <button id="save">Save</button>
+
+                <button id="load">Load</button>
+            </p>
+            <p class="storage-btn">
+                <button id="clear">Clear</button>
+
+                <button id="reset">Reset</button>
+            </p>
         </div>
-    </div>
 
-    <!--This part is for the local storage-->
-    <div class="signup">
-        <h5>Sign Up Today!</h5>
+        <div>
+            <h4 id="giphy-header">Here is your Giphy! : </h4>
+        </div>
 
-        <p>
-          <input type="text" id="yourname" placeholder="Your Name"/>
 
-          <input type="text" id="email" placeholder="Email"/>
-        </p>
-        <p class="storage-btn">
-          <button id="save">Save</button>
-
-          <button id="load">Load</button>
-        </p>
-        <p class="storage-btn">
-          <button id="clear">Clear</button>
-
-          <button id="reset">Reset</button>
-        </p>
-    </div>  
+        <footer class="foot row grid-x grid-padding-x align-center">
+            <p>This site is powered by Giphy API and Merriam-Webster API <img src="websterlogo.png" height="50px"
+                    width="50px"> </p>
+        </footer>
 
 
 
-
-
-     <div>
-        <h4 id="giphy-header">Here is your Giphy! : </h4>
-     </div>
-    
-
-        
-
-  
 
 
 
