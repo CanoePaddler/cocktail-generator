@@ -100,6 +100,12 @@ resetIt.addEventListener('click', function() {
   email.value = '';
 }, false);
 
+resetButton.addEventListener('click', function() {
+    yourname.value = '';
+    address.value = '';
+  }, false);
+  
+
 /* References
 
 https://codepen.io/oneezy/pen/GQmoQY
@@ -109,8 +115,4 @@ https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 
 */
 
-resetButton.addEventListener('click', function() {
-  yourname.value = '';
-  address.value = '';
-}, false);
 
