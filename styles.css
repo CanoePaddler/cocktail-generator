@@ -101,7 +101,10 @@
 
   .result-page-return {
     display: flex;
-    align-items: top;
+  }
+
+  .results-content {
+    width: 60%;
   }
 
 /* This part is for the local storage section

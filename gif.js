@@ -14,5 +14,7 @@ function sendApiRequest() {
       var img = document.createElement("img")
       img.setAttribute("src", imgPath)
       document.body.appendChild(img)
+      dictionaryApi();
     })
   }
+
