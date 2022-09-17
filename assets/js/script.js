@@ -40,6 +40,5 @@ formEl.addEventListener('submit', formSubmit);
 
 
 
-  //----------------------------------------//
 
   
