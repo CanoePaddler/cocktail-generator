@@ -16,6 +16,8 @@ In the future perhaps we could make an interactive app for mobile phones. We cou
 
 ## Deployment Link
 
+https://autumnlegere.github.io/cocktail-generator/
+
 ## Screenshot
 
 ![image](https://user-images.githubusercontent.com/51838530/190555413-b2804063-ccf5-4713-b06f-7f4db59ef893.png)
